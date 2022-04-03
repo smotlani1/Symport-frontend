@@ -31,7 +31,7 @@ class Loads extends Component {
             <th>End City</th>
             <th>End State</th>
             <th>End Zip</th>
-            <th>Distance</th>
+            <th>Loaded Miles</th>
             <th>Hazmat?</th>
           </tr>
         </thead>
@@ -50,7 +50,7 @@ class Loads extends Component {
               <td>{load.end_state}</td>
               <td>{load.end_zip}</td>
               <td>{load.loaded_distance}</td>
-              <td>{load.hazmat}</td>
+              <td>{load.hazmat ? "Yes" : "No"}</td>
             </tr>
           ))}
         </tbody>
