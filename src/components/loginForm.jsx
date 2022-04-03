@@ -8,12 +8,12 @@ class LoginForm extends Component {
 
   handleSubmit = async (e) => {
     const { account } = this.state;
-    console.log(account);
     e.preventDefault();
 
     const { data: jwt } = await login(account.username, account.password);
 
-    localStorage.setItem("token", jwt);
+    localStorage.setItem("token", jwt.access);
+    window.location = "/loads";
   };
 
   handleChange = (e) => {

@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { Component } from "react";
+import { getJWT } from "../services/authService";
 import { Link } from "react-router-dom";
+
+axios.defaults.headers.common["Authorization"] = "JWT " + getJWT();
 
 class Loads extends Component {
   state = {
