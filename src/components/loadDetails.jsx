@@ -61,8 +61,8 @@ class LoadDetails extends React.Component {
     return (
       <div>
         <h2>
-          Load {this.state.loads.load_reference} from{" "}
-          {this.state.loads.start_city} to {this.state.loads.end_city}{" "}
+          {this.state.loads.start_city} to {this.state.loads.end_city} Load{" "}
+          {this.state.loads.load_reference}
         </h2>
         <div name="load-details">
           <h5>Pickup From</h5>
@@ -102,7 +102,7 @@ class LoadDetails extends React.Component {
         </div>
         {/* map each image URL from load to an anchor element */}
         <div name="load-docs">
-          <h3>Test</h3>
+          <h3>Load Documents</h3>
 
           {this.state.loadDocs.map((loadDoc) => (
             <div>

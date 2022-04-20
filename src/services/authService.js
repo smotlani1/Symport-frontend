@@ -1,7 +1,8 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 
-const apiEndpoint = "http://127.0.0.1:8000/api/token/";
+
+const apiEndpoint = process.env.REACT_APP_LOGIN_API;
 
 export function login(username, password) {
   return axios.post(apiEndpoint, { username, password });

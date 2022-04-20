@@ -7,6 +7,8 @@ import LoginForm from "./components/loginForm";
 import Logout from "./components/logout";
 import ProtectedRoute from "./components/common/ProtectedRoute";
 import { getCurrentUser } from "./services/authService";
+import Logbook from "./components/logbook";
+import LogbookEntry from "./components/logbookEntry";
 import "./App.css";
 
 class App extends Component {
@@ -27,6 +29,8 @@ class App extends Component {
             <Route path="/logout" component={Logout} />
             <Route path="/loads/:id" component={LoadDetails} />
             <ProtectedRoute path="/loads" component={Loads} />
+            <ProtectedRoute path="/logbook/new/" component={LogbookEntry} />
+            <ProtectedRoute path="/logbook" component={Logbook} />
           </Switch>
         </main>
       </React.Fragment>

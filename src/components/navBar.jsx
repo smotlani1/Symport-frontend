@@ -23,6 +23,9 @@ const NavBar = ({ user }) => {
           <NavLink className="nav-item nav-link" to="/loads">
             Loads
           </NavLink>
+          <NavLink className="nav-item nav-link" to="/logbook">
+            Logbook
+          </NavLink>
           {!user && (
             <NavLink className="nav-item nav-link" to="/login">
               Login
