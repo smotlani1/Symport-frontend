@@ -13,7 +13,7 @@ class LoadDetails extends React.Component {
     // Retrieve all loads and set state with loads array
     const id = this.state.id;
     const { data: loads } = await axios.get(
-      "http://127.0.0.1:8000/loads/viewloads/" + id
+      process.env.REACT_APP_VIEWLOADS_API + id
     );
     this.setState({
       loads: loads,
