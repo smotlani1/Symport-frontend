@@ -10,7 +10,7 @@ class Logbook extends React.Component {
 
   async componentDidMount() {
     const { data: logEntries } = await axios.get(
-      "http://127.0.0.1:8000/logbook/"
+      process.env.REACT_APP_LOGBOOK_API
     );
     this.setState({ logEntries });
   }
@@ -24,12 +24,12 @@ class Logbook extends React.Component {
             <tr>
               <th>Date</th>
               <th>Truck#</th>
-              <th>Pickup</th>
+              {/* <th>Pickup</th>
               <th>In</th>
               <th>Out</th>
               <th>Deliver</th>
               <th>In</th>
-              <th>Out</th>
+              <th>Out</th> */}
               <th>Start Time</th>
               <th>End Time</th>
               <th>Driving Hours</th>
@@ -44,12 +44,12 @@ class Logbook extends React.Component {
                     </td> */}
                 <td>{logEntry.date}</td>
                 <td>{logEntry.truck_no}</td>
-                <td>{logEntry.pickup_address}</td>
+                {/* <td>{logEntry.pickup_address}</td>
                 <td>{logEntry.time_in}</td>
                 <td>{logEntry.time_out}</td>
                 <td>{logEntry.delivery_address}</td>
                 <td>{logEntry.delivery_timein}</td>
-                <td>{logEntry.delivery_timeout}</td>
+                <td>{logEntry.delivery_timeout}</td> */}
                 <td>{logEntry.start_time}</td>
                 <td>{logEntry.end_time}</td>
                 <td>{logEntry.driving_hours}</td>
