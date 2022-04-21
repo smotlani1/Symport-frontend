@@ -34,7 +34,7 @@ class LoadDetails extends React.Component {
     // data.append("text", event.target.elements.content.value);
     data.append("image", this.state.selectedFile); // add your file to form data
     const url =
-      "http://127.0.0.1:8000/loads/viewloads/" + this.state.id + "/uploads/";
+    process.env.REACT_APP_VIEWLOADS_API + this.state.id + "/uploads/";
     axios
       .post(url, data, {
         headers: {
