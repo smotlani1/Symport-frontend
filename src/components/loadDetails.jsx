@@ -13,7 +13,7 @@ class LoadDetails extends React.Component {
     // Retrieve all loads and set state with loads array
     const id = this.state.id;
     const { data: loads } = await axios.get(
-      process.env.REACT_APP_VIEWLOADS_API + id + '/'
+      process.env.REACT_APP_VIEWLOADS_API + id + "/"
     );
     this.setState({
       loads: loads,
@@ -33,7 +33,8 @@ class LoadDetails extends React.Component {
     // data.append("title", event.target.elements.title.value);
     // data.append("text", event.target.elements.content.value);
     data.append("image", this.state.selectedFile); // add your file to form data
-    const url = process.env.REACT_APP_VIEWLOADS_API + this.state.id + "/uploads/";
+    const url =
+      process.env.REACT_APP_VIEWLOADS_API + this.state.id + "/uploads/";
     axios
       .post(url, data, {
         headers: {

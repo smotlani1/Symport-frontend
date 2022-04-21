@@ -25,16 +25,16 @@ class Loads extends Component {
           <thead>
             <tr>
               <th>Reference</th>
-              <th>Street</th>
+              {/* <th>Street</th> */}
               <th>City</th>
               <th>State</th>
-              <th>Zip</th>
-              <th>End Street</th>
+              {/* <th>Zip</th> */}
+              {/* <th>End Street</th> */}
               <th>End City</th>
               <th>End State</th>
-              <th>End Zip</th>
-              <th>Loaded Miles</th>
-              <th>Hazmat?</th>
+              {/* <th>End Zip</th> */}
+              {/* <th>Loaded Miles</th>
+              <th>Hazmat?</th> */}
             </tr>
           </thead>
           <tbody>
@@ -43,16 +43,16 @@ class Loads extends Component {
                 <td>
                   {<Link to={`/loads/${load.id}`}>{load.load_reference}</Link>}
                 </td>
-                <td>{load.start_street}</td>
+                {/* <td>{load.start_street}</td> */}
                 <td>{load.start_city}</td>
                 <td>{load.start_state}</td>
-                <td>{load.start_zip}</td>
-                <td>{load.end_street}</td>
+                {/* <td>{load.start_zip}</td>
+                <td>{load.end_street}</td> */}
                 <td>{load.end_city}</td>
                 <td>{load.end_state}</td>
-                <td>{load.end_zip}</td>
-                <td>{load.loaded_distance}</td>
-                <td>{load.hazmat ? "Yes" : "No"}</td>
+                {/* <td>{load.end_zip}</td> */}
+                {/* <td>{load.loaded_distance}</td>
+                <td>{load.hazmat ? "Yes" : "No"}</td> */}
               </tr>
             ))}
           </tbody>
