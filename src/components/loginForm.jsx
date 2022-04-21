@@ -13,7 +13,7 @@ class LoginForm extends Component {
     const { data: jwt } = await login(account.username, account.password);
 
     localStorage.setItem("token", jwt.access);
-    window.location = "/loads";
+    // window.location = "/loads";
   };
 
   handleChange = (e) => {
